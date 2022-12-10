@@ -1,114 +1,55 @@
-# Template Repository
+# JSON Server DEMO
 
-![Template][template]
-![License][license]
-![Open Issues][issues]
-![Commit Count][commits]
-![Total Pull Request][PR]
+A json-server which auto updated and folder based endpoints
 
-This is a template repository which contains
+## How To start
 
-- community health files under mostly under `.github`
-- _package.json_ boilerplate
-- github action under `.github/workflows` for markdown file validity
-- `.vscode` folder which have
-  - code snippets
-  - user / workspace settings file
-  - recommended extensions
-  - project dictionaries
+run
 
-## Pre-requisite
+> npm install
 
-- Node 18+
-- VS Code IDE
+then
 
-## How to use this Template repository
+> npm run serve
 
-- Open this [repository][repo] in GitHub
-- Click on `use this template` tab; near _star_ tab
-- Make necessary changes in
-  - _package.json_
-    - replace _template_ with your project name.
-  - markdown files under _.github_ folder
-    - change contact email address and url wherever required.
+now open **<http://localhost:3003>** and server will be visible
 
-## Folder Tree
+## How it works
 
-<details>
-<summary>
-  <mark>Repository Folder Structure</mark>
-</summary>
+create any json file inside **mock/json** directory and server will add the respective json with endpoint
 
-```txt
-├── .editorconfig
-├── .github
-│   ├── CODEOWNERS
-│   ├── CODE_OF_CONDUCT.md
-│   ├── CONTRIBUTING.md
-│   ├── DISCUSSION_TEMPLATE
-│   │   ├── announcements.yml
-│   │   └── ideas.yml
-│   ├── FUNDING.yml
-│   ├── ISSUE_TEMPLATE
-│   │   ├── BUG_FORM.yml
-│   │   ├── ENHANCEMENT.yml
-│   │   ├── FEATURE_REQUEST.md
-│   │   ├── QUESTION.md
-│   │   └── config.yml
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   ├── SECURITY.md
-│   ├── SUPPORT.md
-│   └── workflows
-│       └── markdown-lint.yml
-├── .gitignore
-├── .vscode
-│   ├── cspell.json
-│   ├── dictionaries
-│   │   ├── project-words.txt
-│   │   └── team-member.txt
-│   ├── extensions.json
-│   ├── javascriptreact.json
-│   ├── markdownlint.json
-│   ├── pkg.json
-│   ├── settings.json
-│   ├── tasks.json
-│   └── template.code-snippets
-├── CHANGELOG.md
-├── LICENSE
-├── README.md
-├── docs
-│   └── README.md
-├── package.json
-├── public
-│   └── assets
-│       └── images
-├── src
-│   └── index.js
-├── template.code-workspace
-└── tree
-12 directories, 36 files
+you can edit the json file while running server and it will update without restarting
 
-```
+Alternative approach
 
-</details>
+> npm run start:port -- -port 4001
 
----
+json server will start on port 4001 but it will not update the json runtime.
 
-## License
+## routing
 
-This project is licensed under the [MIT License](LICENSE).
+routing added so response also be accessible with api prefix for eg. _/api/<file-name>_
 
----
+file name with separated by `-` can be accessible with `/`
 
-> [!Caution]
-> Please update the readme and package.json as per your project.
-> Make sure to remove or update the _CODEOWNERS_ file.
+## examples
 
-<!-- References -->
+- **hello-world.json** file data can be accessible at `http://localhost:3003/hello/world`
+- _user.json_ data can be accessed at `http://localhost:3003/user` and `http://localhost:3003/api/user`
+- folder can be nested under **json** folder and data is accessible at folder-file-name route
+  for eg. _json/auth/login.json_ data can be accessible at
+  `http://localhost:3003/auth-login` and `http://localhost:3003/api/auth-login`
 
-[template]: https://badgen.net/static/github/template?icon=github
-[repo]: https://github.com/xkeshav/template
-[license]: https://badgen.net/github/license/xkeshav/template
-[issues]: https://badgen.net/github/open-issues/xkeshav/template
-[PR]: https://badgen.net/github/prs/xkeshav/template
-[commits]: https://badgen.net/github/commits/xkeshav/template/main?color=green
+## Notes
+
+all request are **GET** by default, no POST and other verb can be used while accessing
+
+## Screenshots
+
+### Running server in window
+
+![run server in command](./images/command.png)
+
+### display landing page in Chrome
+
+![server running in chrome ](./images/server-in-chrome.png)
