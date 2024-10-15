@@ -3,5 +3,140 @@
     {
       "path": "."
     }
-  ]
+  ],
+  "[CODEOWNERS]": {
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  },
+  "[json][jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[markdown]": {
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    }
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "debug.javascript.codelens.npmScripts": "never",
+  "debug.showVariableTypes": true,
+  "editor.accessibilitySupport": "off",
+  "editor.comments.insertSpace": true,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 14,
+  "editor.inlayHints.enabled": "onUnlessPressed",
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.size": "fit",
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.stickyScroll.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.tabCompletion": "onlySnippets",
+  "editor.tabSize": 2,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "astro": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "jsx": {
+      "markup.attributes": {
+        "class*": "className"
+      },
+      "markup.valuePrefix": {
+        "class*": "myStyles"
+      }
+    }
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.excludeGitIgnore": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.ts": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    ".gitignore": ".npmrc, .eslint*,.editorconfig,.babelrc,.prettier*, .git*",
+    "package.json": "package-lock.json, yarn.lock",
+    "tsconfig.json": "tsconfig.*.json"
+  },
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.mdx": "markdown",
+    ".1": "shellscript",
+    "CODEOWNERS": "plaintext"
+  },
+  "files.autoSave": "afterDelay",
+  "files.defaultLanguage": "markdown",
+  "files.exclude": {
+    "**/node_modules/": true
+  },
+  "files.simpleDialog.enable": true,
+  "files.watcherExclude": {
+    "**/node_modules/*/**": true
+  },
+  "git.autofetch": true,
+  "git.branchProtection": [
+    "main",
+    "develop"
+  ],
+  "git.confirmSync": false,
+  "git.defaultCloneDirectory": "~/dev",
+  "git.enableSmartCommit": true,
+  "git.openAfterClone": "alwaysNewWindow",
+  "git.openRepositoryInParentFolders": "always",
+  "github.gitProtocol": "ssh",
+  "git.postCommitCommand": "push",
+  "git.rememberPostCommitCommand": true,
+  "git.replaceTagsWhenPull": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "javascript.preferences.quoteStyle": "single",
+  "markdownlint.config": {
+    "MD003": false,
+    "MD033": false
+  },
+  "redhat.telemetry.enabled": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+  "typescript.inlayHints.parameterNames.suppressWhenArgumentMatchesName": false,
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.autoDetectColorScheme": true,
+  "window.title": "${activeFolderMedium}${separator}${activeEditorShort}${separator}${rootName}${separator}${dirty}",
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editorAssociations": {
+    "*.log": "default"
+  },
+  "workbench.externalBrowser": "chrome",
+  "workbench.iconTheme": "file-icons",
+  "workbench.layoutControl.enabled": false,
+  "workbench.layoutControl.type": "menu",
+  "workbench.list.multiSelectModifier": "alt",
+  "workbench.startupEditor": "none",
+  "workbench.tree.enableStickyScroll": true,
+  "zenMode.centerLayout": false,
+  "zenMode.hideLineNumbers": false
 }
