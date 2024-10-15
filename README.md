@@ -10,7 +10,7 @@ run
 
 then
 
-> npm run serve
+> npm run start
 
 now open **<http://localhost:3003>** and server will be visible
 
